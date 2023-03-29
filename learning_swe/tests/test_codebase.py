@@ -12,6 +12,12 @@ def test_add():
     """test addition is correct"""
     assert add(1, 2) == 3
 
+@pytest.mark.number
+def test_add_incorrect():
+    """test incorrect addition"""
+    with pytest.raises(AssertionError):
+        assert add(1, 2) == 4
+
 
 @pytest.mark.number
 def test_add_must_number():
