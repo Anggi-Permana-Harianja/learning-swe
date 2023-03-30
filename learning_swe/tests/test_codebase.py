@@ -1,4 +1,5 @@
 from unittest.mock import Mock
+from learning_swe.learn_pytest.codebase import calculate_sum
 
 import pytest
 
@@ -114,3 +115,17 @@ def test_get_name_lower_parametrize(names):
     mock.name = names
 
     assert get_name_lowercase(mock) == names.lower()
+
+# test below is a monkeypatch example
+@pytest.mark.test_monkeypatch
+def test_calculate_sum(monkeypatch) -> None:
+    # we monkeypatch expensive_computation
+    # for the sake of test coverage
+    def mock_expensive_computation():
+        return None
+    
+    # here we monkeypatch the expesive_computation() with mock_expensive_computatio
+    # so we can have expesive_computation() tested without actually running it 
+    monkeypatch.setattr("learning_swe.learn_pytest.codebase.expensive_computation", mock_expensive_computation)
+
+    assert calculate_sum(2, 3) == 5

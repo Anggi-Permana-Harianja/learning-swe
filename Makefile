@@ -14,3 +14,9 @@ test-number:
 	
 test-parametrize:
 	poetry run python -m pytest -v ./learning_swe/tests -m "test_parametrize" --cov=./learning_swe
+
+test-mock:
+	poetry run python -m pytest -v ./learning_swe/tests -m "test_mock" --cov=./learning_swe
+
+test-monkeypatch:
+	poetry run python -m pytest -v ./learning_swe/tests -m "test_monkeypatch" --cov=./learning_swe
