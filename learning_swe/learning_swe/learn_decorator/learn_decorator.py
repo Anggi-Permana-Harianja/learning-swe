@@ -13,7 +13,7 @@ def ensure_numpy(function):
 
 # function below is the example of decorators
 # we can send numpy_sum as parameters to ensure_numpy
-# equals to ensure_numpy(numpy_sum(array))
+# equals to ensure_numpy(numpy_sum(array)) and ensure_numpy(numpy_mean(array))
 @ensure_numpy
 def numpy_sum(array):
     return array.sum()
