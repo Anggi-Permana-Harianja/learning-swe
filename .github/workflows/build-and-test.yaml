@@ -11,7 +11,11 @@ jobs:
         python-version: ["3.9"]
 
     steps:
-      - uses: action/checkout@v3
+      - name: Checkout code
+        uses: action/checkout@v3
+        with:
+          repository: learning-swe
+          ref: main
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4
         with:
