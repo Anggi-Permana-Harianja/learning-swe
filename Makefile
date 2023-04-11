@@ -21,5 +21,4 @@ test-mock:
 test-monkeypatch:
 	poetry run python -m pytest -v ./learning_swe/tests -m "test_monkeypatch" --cov=./learning_swe
 
-test-all:
-	test-number test-parametrize test-mock test-monkeypatch
+test-all: test-number test-parametrize test-mock test-monkeypatch
