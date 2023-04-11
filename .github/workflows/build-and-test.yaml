@@ -17,7 +17,8 @@ jobs:
       - name: Checkout code
         uses: action/checkout@v2
         with:
-          ref: main
+          repository: ${{ github.repository }}
+          ref: 'main'
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4
         with:
