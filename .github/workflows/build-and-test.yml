@@ -28,9 +28,5 @@ jobs:
       run: |
           poetry install
     - name: Test with pytest
-      run: 
-          python /home/runner/venv/bin/pytest -m 'number' learning-swe/learning_swe/tests/test_codebase.py
-          python /home/runner/venv/bin/pytest -m 'string' learning-swe/learning_swe/tests/test_codebase.py
-          python /home/runner/venv/bin/pytest -m 'test_parametrize' learning-swe/learning_swe/tests/test_codebase.py
-          python /home/runner/venv/bin/pytest -m 'test_mock' learning-swe/learning_swe/tests/test_codebase.py
-          python /home/runner/venv/bin/pytest -m 'test_monkeypatch' learning-swe/learning_swe/tests/test_codebase.py
+      run: |
+        pytest
