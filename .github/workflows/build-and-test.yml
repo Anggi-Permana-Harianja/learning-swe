@@ -28,9 +28,9 @@ jobs:
       run: |
           poetry install
     - name: Test with pytest
-      run: |
-          python pytest -m 'number' learning_swe/tests/test_codebase.py
-          python pytest -m 'string' learning_swe/tests/test_codebase.py
-          python pytest -m 'test_parametrize' learning_swe/tests/test_codebase.py
-          python pytest -m 'test_mock' learning_swe/tests/test_codebase.py
-          pythonpytest -m 'test_monkeypatch' learning_swe/tests/test_codebase.py
+      run: 
+          pytest -m 'number' 
+          pytest -m 'string' 
+          pytest -m 'test_parametrize' 
+          pytest -m 'test_mock'
+          pytest -m 'test_monkeypatch'
