@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: action/checkout@v3
+        uses: action/checkout@v2
         with:
           repository: Anggi-Permana-Harianja/learning-swe
           ref: main
