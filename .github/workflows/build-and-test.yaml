@@ -1,6 +1,9 @@
-name: Python package
+name: build-and-test
 
 on: [push]
+
+concurrency:
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -14,7 +17,6 @@ jobs:
       - name: Checkout code
         uses: action/checkout@v2
         with:
-          repository: Anggi-Permana-Harianja/learning-swe
           ref: main
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4
