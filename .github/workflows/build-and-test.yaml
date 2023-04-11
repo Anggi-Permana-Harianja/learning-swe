@@ -14,7 +14,7 @@ jobs:
       - name: Checkout code
         uses: action/checkout@v3
         with:
-          repository: learning-swe
+          repository: Anggi-Permana-Harianja/learning-swe
           ref: main
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4
