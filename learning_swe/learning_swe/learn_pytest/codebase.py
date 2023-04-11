@@ -1,6 +1,7 @@
 import time
 from typing import Union
 
+
 def add(num1: int, num2: int) -> int:
     return num1 + num2
 
@@ -34,10 +35,14 @@ def get_name(obj_my_id: MyId) -> str:
 def get_name_lowercase(obj_my_id: MyId) -> str:
     return obj_my_id.name.lower()
 
+
 # two functions below related to monkeypatch example
-def calculate_sum(num1: Union[int, float], num2: Union[int, float]) -> Union[int, float]:
+def calculate_sum(
+    num1: Union[int, float], num2: Union[int, float]
+) -> Union[int, float]:
     expensive_computation()
     return num1 + num2
+
 
 def expensive_computation():
     time.sleep(1000)

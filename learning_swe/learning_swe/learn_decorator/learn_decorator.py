@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 
+
 # function decorator to ensure numpy input
 # and found off output to 1 decimal places
 def ensure_numpy(function):
@@ -8,8 +9,9 @@ def ensure_numpy(function):
         array = np.asarray(data)
         output = function(array)
         return np.around(output, 1)
-    
+
     return decorated_function
+
 
 # function below is the example of decorators
 # we can send numpy_sum as parameters to ensure_numpy
@@ -18,13 +20,15 @@ def ensure_numpy(function):
 def numpy_sum(array):
     return array.sum()
 
+
 @ensure_numpy
 def numpy_mean(array):
     return np.mean(array)
 
-x = np.random.randn(10,3)
+
+x = np.random.randn(10, 3)
 y = pd.DataFrame(x, columns=["A", "B", "C"])
- 
+
 # calling decorated functions
 # note: we call the decorated numpy_sum and numpy_mean instead the ensure_numpy
 print("numpy_sum(x):", numpy_sum(x))

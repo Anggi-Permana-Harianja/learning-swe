@@ -3,7 +3,6 @@ name = "learning-swe"
 version = "0.1.0"
 description = "Package for learning SWE aspect of DS"
 authors = ["anggi-permana <anggi.permana@mondu.ai>"]
-readme = "README.md"
 packages = [{include = "learning_swe"}]
 
 [tool.poetry.dependencies]
