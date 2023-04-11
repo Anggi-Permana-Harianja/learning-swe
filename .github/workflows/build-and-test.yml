@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-      - ${{ github.ref_name }} 
+      - ${ github.ref_name } 
 
 permissions:
   contents: read
