@@ -2,9 +2,9 @@ name: build-and-test
 
 on:
   push:
-    branches: ${{ github.ref }}
-  pull_request:
-    branches: ${{ github.ref }}
+    branches:
+      - main
+      - ${{ github.ref }}
 
 permissions:
   contents: read
