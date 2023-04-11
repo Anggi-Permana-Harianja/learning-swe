@@ -32,4 +32,4 @@ jobs:
           pip install pytest
     - name: Test with pytest
       run: |
-        pytest -m 'number' learning-swe/learning_swe/tests/test_codebase.py
+        pytest -m 'number' learning_swe/tests/test_codebase.py
